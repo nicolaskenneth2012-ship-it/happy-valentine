@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Valentine 💖</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #fff0f6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slider {
+      width: 380px;
+      height: 580px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      overflow: hidden;
+      position: relative;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .slide { display: none; }
+    .slide.active { display: block; }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 240px;
+      border-radius: 20px;
+      margin: 12px 0;
+    }
+
+    .choco {
+      font-size: 42px;
+      margin: 10px 0;
+    }
+
+    button {
+      position: absolute;
+      bottom: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff5fa2;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .next { right: 20px; }
+    .prev { left: 20px; display: none; }
+  </style>
+</head>
+<body>
+
+<div class="slider">
+
+  <div class="slide active">
+    <h1>Happy Valentine 💖</h1>
+    <div class="choco">🍫🍫🍫</div>
+    <img src="https://placekitten.com/300/300">
+    <p>Maafin yaa aku belum bisa ngasih coklat langsung 🥺</p>
+  </div>
+
+  <div class="slide">
+    <img src="https://placekitten.com/301/301">
+    <p>
+      Aku cuma pengen kamu jadi <b>cewee</b> yang lebih pede yaa 💕<br>
+      karena kamu itu cantik ✨
+    </p>
+    <div class="choco">🍫🍫</div>
+  </div>
+
+  <div class="slide">
+    <img src="https://placekitten.com/302/302">
+    <p>
+      Maaf yaa kalau aku cuma bisa ngasih ini 😔<br>
+      tapi ini tulus dari aku 💗
+    </p>
+  </div>
+
+  <div class="slide">
+    <img src="https://placekitten.com/303/303">
+    <p>Semoga ini bikin kamu senyum hari ini 😄</p>
+    <p>Happy Valentine yaa 💕</p>
+    <div class="choco">🍫🍫🍫</div>
+  </div>
+
+  <button class="prev" onclick="move(-1)">Prev</button>
+  <button class="next" onclick="move(1)">Next</button>
+</div>
+
+<script>
+  let i = 0;
+  const slides = document.querySelectorAll(".slide");
+  const prev = document.querySelector(".prev");
+
+  function move(step) {
+    slides[i].classList.remove("active");
+    i += step;
+
+    if (i <= 0) { i = 0; prev.style.display = "none"; }
+    else { prev.style.display = "block"; }
+
+    if (i >= slides.length) i = slides.length - 1;
+    slides[i].classList.add("active");
+  }
+</script>
+
+</body>
+</html>
