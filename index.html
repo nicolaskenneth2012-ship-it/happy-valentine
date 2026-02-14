@@ -1,126 +1,164 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Valentine 💖</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffd6e8, #fff0f6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+<meta charset="UTF-8">
+<title>Happy Valentine</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f7d9e3, #fdf4f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .slider {
-      width: 380px;
-      height: 580px;
-      background: white;
-      border-radius: 24px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      overflow: hidden;
-      position: relative;
-      padding: 20px;
-      text-align: center;
-    }
+.slider {
+  width: 420px;
+  height: 620px;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
 
-    .slide { display: none; }
-    .slide.active { display: block; }
+.slide {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  display: none;
+}
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
+.slide.active {
+  display: block;
+  animation: fade 0.6s;
+}
 
-    p {
-      font-size: 22px;
-      line-height: 1.7;
-    }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    img {
-      width: 240px;
-      border-radius: 20px;
-      margin: 12px 0;
-    }
+h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
 
-    .choco {
-      font-size: 42px;
-      margin: 10px 0;
-    }
+p {
+  font-size: 24px;
+  line-height: 1.8;
+  margin: 16px 0;
+}
 
-    button {
-      position: absolute;
-      bottom: 20px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 20px;
-      background: #ff5fa2;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.cat {
+  font-size: 110px;
+  animation: wiggle 1.4s infinite;
+}
 
-    .next { right: 20px; }
-    .prev { left: 20px; display: none; }
-  </style>
+.choco {
+  font-size: 42px;
+  margin-top: 10px;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-4deg); }
+}
+
+button {
+  position: absolute;
+  bottom: 18px;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 26px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #555;
+  color: white;
+}
+
+.next { right: 18px; }
+.prev { left: 18px; display: none; }
+</style>
 </head>
-<body>
 
+<body>
 <div class="slider">
 
+  <!-- SLIDE 1 -->
   <div class="slide active">
-    <h1>Happy Valentine 💖</h1>
-    <div class="choco">🍫🍫🍫</div>
-    <img src="https://placekitten.com/300/300">
-    <p>Maafin yaa aku belum bisa ngasih coklat langsung 🥺</p>
-  </div>
-
-  <div class="slide">
-    <img src="https://placekitten.com/301/301">
+    <h1>Happy Valentine Ellynn</h1>
+    <div class="cat">🐱</div>
+    <div class="choco">🍫 🍫 🍪</div>
     <p>
-      Aku cuma pengen kamu jadi <b>cewee</b> yang lebih pede yaa 💕<br>
-      karena kamu itu cantik ✨
-    </p>
-    <div class="choco">🍫🍫</div>
-  </div>
-
-  <div class="slide">
-    <img src="https://placekitten.com/302/302">
-    <p>
-      Maaf yaa kalau aku cuma bisa ngasih ini 😔<br>
-      tapi ini tulus dari aku 💗
+      Maafin yaa…<br>
+      aku belum bisa ngasih coklat secara langsung.
     </p>
   </div>
 
+  <!-- SLIDE 2 -->
   <div class="slide">
-    <img src="https://placekitten.com/303/303">
-    <p>Semoga ini bikin kamu senyum hari ini 😄</p>
-    <p>Happy Valentine yaa 💕</p>
-    <div class="choco">🍫🍫🍫</div>
+    <div class="cat">😺</div>
+    <div class="choco">🍩 🍫 🍩</div>
+    <p>
+      Aku cuma pengen kamu jadi cewee yang lebih pede yaa,<br>
+      karnaa kamu ituu cantik.
+    </p>
   </div>
 
-  <button class="prev" onclick="move(-1)">Prev</button>
-  <button class="next" onclick="move(1)">Next</button>
+  <!-- SLIDE 3 -->
+  <div class="slide">
+    <div class="cat">🙀</div>
+    <div class="choco">🍫 🍪 🍫</div>
+    <p>
+      sorry yaa ellynn akuu ndaa bisaa kasii coklat nyaa secaraa langsungg<br>
+      karnaa akuu ndaa mauu adaa kejadiann yangg ituu keulangg kee akuu<br>
+      samaa kamuu lagii, sorryy yaa cumaa bisaa kasii inii,<br>
+      happyy valentinee yaa ellynnn
+    </p>
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <div class="cat">😽</div>
+    <div class="choco">🍫 🍫 🍫</div>
+    <p>semoga ini bisa bikin kamu senyum terus hari ini</p>
+    <p>makasii yaa udaa bacaa sampee akhirr</p>
+    <p>baaiii baaiii</p>
+  </div>
+
+  <button class="prev" onclick="changeSlide(-1)">Prev</button>
+  <button class="next" onclick="changeSlide(1)">Next</button>
 </div>
 
 <script>
-  let i = 0;
-  const slides = document.querySelectorAll(".slide");
-  const prev = document.querySelector(".prev");
+let current = 0;
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".prev");
 
-  function move(step) {
-    slides[i].classList.remove("active");
-    i += step;
+function changeSlide(step) {
+  slides[current].classList.remove("active");
+  current += step;
 
-    if (i <= 0) { i = 0; prev.style.display = "none"; }
-    else { prev.style.display = "block"; }
-
-    if (i >= slides.length) i = slides.length - 1;
-    slides[i].classList.add("active");
+  if (current <= 0) {
+    current = 0;
+    prevBtn.style.display = "none";
+  } else {
+    prevBtn.style.display = "block";
   }
-</script>
 
+  if (current >= slides.length) {
+    current = slides.length - 1;
+  }
+
+  slides[current].classList.add("active");
+}
+</script>
 </body>
 </html>
